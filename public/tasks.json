@@ -1,0 +1,44 @@
+[
+  {
+    "id": "1",
+    "title": "User interview",
+    "status": "todo",
+    "tags": ["Research"],
+    "priority": "low",
+    "assignees": ["user1", "user2"],
+    "comments": 2,
+    "attachments": 2,
+    "dueDate": "2025-07-28"
+  },
+  {
+    "id": "2",
+    "title": "UI Design",
+    "status": "in-progress",
+    "tags": ["Design"],
+    "priority": "high",
+    "assignees": ["user3"],
+    "comments": 2,
+    "attachments": 2,
+    "dueDate": "2025-07-28"
+  },
+  {
+    "id": "3",
+    "title": "Prototype",
+    "status": "approved",
+    "tags": ["Research"],
+    "priority": "low",
+    "assignees": ["user1", "user2"],
+    "comments": 35,
+    "attachments": 243
+  },
+  {
+    "id": "4",
+    "title": "Group Management",
+    "status": "rejected",
+    "tags": ["Other"],
+    "priority": "low",
+    "assignees": ["user4"],
+    "comments": 329,
+    "attachments": 0
+  }
+]
