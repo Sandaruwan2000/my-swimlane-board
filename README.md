@@ -193,3 +193,7 @@ type Task = {
 ## 📝 Notes
 
 This implementation follows modern web development best practices and provides a solid foundation for a production-ready task management application. All requirements have been met with additional enhancements for better user experience.
+
+## 📸 Screenshot
+
+![Application Screenshot](image.png)
