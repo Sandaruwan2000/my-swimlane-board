@@ -87,35 +87,64 @@ A modern, responsive task management dashboard built with Next.js, TailwindCSS, 
 
 ## 🚀 Getting Started
 
-1. **Install dependencies**
+1. **Navigate to the project directory**
+   ```bash
+   cd my-swimlane-board
+   ```
+
+2. **Install dependencies**
    ```bash
    npm install
    ```
 
-2. **Run the development server**
+3. **Run the development server**
    ```bash
    npm run dev
    ```
 
-3. **Open your browser**
+4. **Open your browser**
    Navigate to [http://localhost:3000](http://localhost:3000)
+
+5. **Go to the task page**
+   Navigate to [http://localhost:3000/task](http://localhost:3000/task) to view the swimlane board
 
 ## 📁 Project Structure
 
 ```
-src/
-├── app/
-│   ├── dashboard/          # Dashboard page
-│   ├── task/              # Main task board page
-│   └── layout.tsx         # Root layout
-├── components/
-│   ├── Sidebar.tsx        # Navigation sidebar
-│   ├── Swimlane.tsx       # Swimlane column component
-│   └── TaskCard.tsx       # Individual task card
-├── store/
-│   └── taskStore.ts       # Zustand state management
-└── public/
-    └── tasks.json         # Mock API data
+my-swimlane-board/
+├── eslint.config.mjs       # ESLint configuration
+├── next-env.d.ts          # Next.js TypeScript declarations
+├── next.config.ts         # Next.js configuration
+├── package.json           # Project dependencies and scripts
+├── postcss.config.mjs     # PostCSS configuration
+├── README.md              # Project documentation
+├── tsconfig.json          # TypeScript configuration
+├── public/
+│   ├── file.svg           # File icon
+│   ├── globe.svg          # Globe icon
+│   ├── next.svg           # Next.js logo
+│   ├── tasks.json         # Mock task data
+│   ├── vercel.svg         # Vercel logo
+│   └── window.svg         # Window icon
+└── src/
+    ├── app/
+    │   ├── favicon.ico     # App favicon
+    │   ├── globals.css     # Global styles
+    │   ├── layout.tsx      # Root layout component
+    │   ├── page.tsx        # Home page
+    │   ├── dashboard/
+    │   │   └── page.tsx    # Dashboard page
+    │   └── task/
+    │       └── page.tsx    # Task board page
+    ├── components/
+    │   ├── FilterPanel.tsx # Filter panel component
+    │   ├── index.ts        # Component exports
+    │   ├── QuickFilters.tsx # Quick filters component
+    │   ├── Sidebar.tsx     # Navigation sidebar
+    │   ├── Swimlane.tsx    # Swimlane column component
+    │   └── TaskCard.tsx    # Individual task card
+    └── store/
+        └── taskStore.ts    # Zustand state management
 ```
 
 ## 🎨 Design Features
