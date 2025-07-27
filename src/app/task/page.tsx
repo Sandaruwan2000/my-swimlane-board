@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import Link from 'next/link';
 import Sidebar from '@/components/Sidebar';
 import { useTaskStore } from '@/store/taskStore';
 import Swimlane from '@/components/Swimlane';
@@ -175,16 +174,6 @@ export default function TaskPage() {
                   <span className="hidden sm:inline">Add Task</span>
                   <span className="sm:hidden">Add</span>
                 </button>
-                
-                <Link
-                  href="/"
-                  className="hidden sm:flex items-center px-3 py-2 text-gray-600 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors text-sm"
-                >
-                  <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-                  </svg>
-                  Back to Home
-                </Link>
               </div>
             </div>
           </div>
