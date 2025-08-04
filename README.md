@@ -199,4 +199,6 @@ This implementation follows modern web development best practices and provides a
 ![Application Screenshot](image.png)
 
 ## Website
-<a>https://my-swimlane-board-git-deploye-sandaruwan2000s-projects.vercel.app/task</a>
+<a href="https://my-swimlane-board-git-deploye-sandaruwan2000s-projects.vercel.app/task" target="_blank">
+  View Swimlane Task Board
+</a>
