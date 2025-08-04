@@ -2,13 +2,6 @@ import { useState } from 'react';
 import { Task, useTaskStore } from '@/store/taskStore';
 import TaskCard from './TaskCard';
 
-const STATUS_COLOR: Record<string, string> = {
-  todo: 'bg-gray-200',
-  'in-progress': 'bg-yellow-300',
-  approved: 'bg-green-300',
-  rejected: 'bg-red-300'
-};
-
 interface SwimlaneProps {
   title: string;
   status: Task['status'];
@@ -16,9 +9,9 @@ interface SwimlaneProps {
   onTaskDrop?: (taskId: string, newStatus: Task['status']) => void;
 }
 
-export default function Swimlane({ title, status, tasks, onTaskDrop }: SwimlaneProps) {
+export default function Swimlane({ status, tasks, onTaskDrop }: SwimlaneProps) {
   const [isDragOver, setIsDragOver] = useState(false);
-  const { filters, setFilters, clearFilters } = useTaskStore();
+  const { filters, clearFilters } = useTaskStore();
   
   // Check if any filters are active
   const hasActiveFilters = Object.values(filters).some(filterArray => filterArray.length > 0);
@@ -44,7 +37,7 @@ export default function Swimlane({ title, status, tasks, onTaskDrop }: SwimlaneP
     }
   };
 
-  const handleTaskDragStart = (e: React.DragEvent, task: Task) => {
+  const handleTaskDragStart = () => {
     // Additional logic can be added here if needed
   };
 

@@ -11,7 +11,6 @@ export default function TaskPage() {
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [filterOpen, setFilterOpen] = useState(false);
   const { 
-    tasks, 
     filteredTasks, 
     searchQuery, 
     filters,
@@ -99,7 +98,7 @@ export default function TaskPage() {
               )}
               <div>
                 <h1 className="text-xl sm:text-2xl font-bold text-gray-900">Task Board</h1>
-                <p className="text-xs sm:text-sm text-gray-500">Manage your team's workflow efficiently</p>
+                <p className="text-xs sm:text-sm text-gray-500">Manage your team&apos;s workflow efficiently</p>
               </div>
             </div>
             
@@ -184,7 +183,7 @@ export default function TaskPage() {
               <div className="flex items-center justify-between">
                 <p className="text-sm text-gray-600">
                   Found {totalTasks} task{totalTasks !== 1 ? 's' : ''} 
-                  {searchQuery && ` matching "${searchQuery}"`}
+                  {searchQuery && ` matching &quot;${searchQuery}&quot;`}
                   {getActiveFilterCount() > 0 && ` with ${getActiveFilterCount()} filter${getActiveFilterCount() !== 1 ? 's' : ''} applied`}
                 </p>
                 {hasActiveFilters && (
@@ -398,7 +397,7 @@ export default function TaskPage() {
                         
                         <Swimlane
                           title={status.label}
-                          status={status.value as any}
+                          status={status.value as 'todo' | 'in-progress' | 'approved' | 'rejected'}
                           tasks={filteredTasks.filter((task) => task.status === status.value)}
                           onTaskDrop={handleTaskDrop}
                         />
@@ -430,7 +429,7 @@ export default function TaskPage() {
                   </div>
                   <div className="flex-1">
                     <p className="text-sm text-gray-900">
-                      <span className="font-medium">John Doe</span> created a new task "User Authentication"
+                      <span className="font-medium">John Doe</span> created a new task &quot;User Authentication&quot;
                     </p>
                     <p className="text-xs text-gray-500">2 minutes ago</p>
                   </div>
@@ -444,7 +443,7 @@ export default function TaskPage() {
                   </div>
                   <div className="flex-1">
                     <p className="text-sm text-gray-900">
-                      <span className="font-medium">Sarah Wilson</span> completed "Database Design"
+                      <span className="font-medium">Sarah Wilson</span> completed &quot;Database Design&quot;
                     </p>
                     <p className="text-xs text-gray-500">15 minutes ago</p>
                   </div>

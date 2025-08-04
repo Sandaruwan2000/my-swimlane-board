@@ -10,7 +10,7 @@ import FilterPanel from '@/components/FilterPanel';
 export default function DashboardPage() {
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [filterOpen, setFilterOpen] = useState(false);
-  const { tasks, filteredTasks, setTasks, updateTaskStatus, loadTasksFromStorage } = useTaskStore();
+  const { filteredTasks, setTasks, updateTaskStatus, loadTasksFromStorage } = useTaskStore();
 
   useEffect(() => {
     const loadTasks = async () => {
